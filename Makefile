@@ -7,3 +7,5 @@ start_1:
 start gunicorn:
 	uv run gunicorn --workers=4 --bind=127.0.0.1:8000 example1:app
 
+start_prod:
+    uv run gunicorn -w 5 -b 0.0.0.0:8000 example1:app
